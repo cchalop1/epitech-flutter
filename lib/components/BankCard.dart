@@ -57,13 +57,38 @@ class BankCard extends StatelessWidget {
             ],
           )),
           Container(
-              child: Text(
-            "Epitech Flutter",
-            style: GoogleFonts.robotoMono(
-              fontSize: 13,
-              fontWeight: FontWeight.w300,
-              color: Colors.black,
-            ),
+              child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Epitech Flutter",
+                style: GoogleFonts.robotoMono(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                ),
+              ),
+              Column(
+                children: [
+                  Text(
+                    "EXPIRY",
+                    style: GoogleFonts.robotoMono(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text("09/24",
+                        style: GoogleFonts.roboto(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        )),
+                  )
+                ],
+              )
+            ],
           ))
         ],
       ),
