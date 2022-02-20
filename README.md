@@ -18,3 +18,8 @@ samples, guidance on mobile development, and a full API reference.
 
 
 [https://dribbble.com/shots/15412758/attachments/7179416?mode=media](https://dribbble.com/shots/15412758/attachments/7179416?mode=media)
+
+
+## MUST HAVE 
+
+[https://intra.epitech.eu/module/2021/M-TRC-836/FR-8-2/acti-508611/project/file/Project-Flutter-I-Flutter-Beginner/Project-Sheet-Flutter-I_2022.pdf](https://intra.epitech.eu/module/2021/M-TRC-836/FR-8-2/acti-508611/project/file/Project-Flutter-I-Flutter-Beginner/Project-Sheet-Flutter-I_2022.pdf)
