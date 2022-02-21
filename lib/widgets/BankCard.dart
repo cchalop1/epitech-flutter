@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/components/BigText.dart';
 
 class BankCard extends StatelessWidget {
   const BankCard({Key? key}) : super(key: key);
@@ -47,13 +48,8 @@ class BankCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "2222 2222 2222 2222",
-                style: GoogleFonts.roboto(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w500,
-                ),
-              )
+              BigText(text: "2222 2222 2222 2222")
+              
             ],
           )),
           Container(

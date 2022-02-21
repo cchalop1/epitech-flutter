@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/BankCard.dart';
+import 'package:myapp/widgets/BankCard.dart';
 
 void main() {
   runApp(const MyApp());
