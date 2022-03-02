@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/widgets/AmountInput.dart';
+import 'package:myapp/widgets/ListTransaction.dart';
 import 'package:myapp/widgets/SelectContacts.dart';
 
 class SendMony extends StatelessWidget {
@@ -15,6 +16,7 @@ class SendMony extends StatelessWidget {
         AmountInput(),
         SelectContacts(),
         Text("Transaction history"),
+        ListTransaction()
       ],
     );
   }
