@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/Contacts.dart';
 import 'package:myapp/pages/SendMony.dart';
 import 'package:myapp/widgets/BankCard.dart';
 
 final List<Widget> widgetOptions = <Widget>[
   const Center(
-    child: Text("CONTACTS"),
+    child: Contacts(),
   ),
   const BankCard(),
   const Center(
