@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/components/BigText.dart';
+// import 'package:google_fonts/google_fonts.dart';
+// import 'package:myapp/components/BigText.dart';
 import 'package:myapp/widgets/homepage/HomeBalance.dart';
 import 'package:myapp/widgets/homepage/HomeExpense.dart';
 import 'package:myapp/widgets/homepage/HomeConvertion.dart';
@@ -28,6 +28,7 @@ class HomePage extends StatelessWidget {
           HomeExpense(),
           HomeConvertion(),
           HomeWallet(),
+          // HomeChart(title: "Chart"),
         ],
       ),
     );
