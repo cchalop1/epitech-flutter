@@ -21,7 +21,7 @@ class _SelectContactsState extends State<SelectContacts> {
               });
             },
             child: Container(
-              width: 100.0,
+              width: 70.0,
               decoration: index == _selectedIndex
                   ? BoxDecoration(
                       color: Color.fromARGB(255, 185, 72, 64),
@@ -40,7 +40,7 @@ class _SelectContactsState extends State<SelectContacts> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100.0,
+      height: 70.0,
       margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
       child: ListView(
         scrollDirection: Axis.horizontal,

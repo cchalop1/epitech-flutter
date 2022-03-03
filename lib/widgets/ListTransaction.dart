@@ -5,12 +5,13 @@ class ListTransaction extends StatelessWidget {
 
   List<Widget> buildTransactionList() {
     return List.generate(
-        3,
+        8,
         // Extract transactionn card in component
         (index) => ListTile(
-              leading: Icon(Icons.account_balance_wallet),
-              title: Text('Transaction $index'),
-              subtitle: Text('$index'),
+              leading: Container(
+                  color: Colors.green, child: Icon(Icons.arrow_upward)),
+              title: Text('Transaction to toto'),
+              subtitle: Text('300\$'),
             ));
   }
 
@@ -19,7 +20,7 @@ class ListTransaction extends StatelessWidget {
     return Container(
         // find a way to put the container bottom of the
         // screen
-        height: 200,
+        height: 300,
         child: ListView(
           scrollDirection: Axis.vertical,
           children: buildTransactionList(),
