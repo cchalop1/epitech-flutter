@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/constants.dart';
 
 class TextFieldContainer extends StatelessWidget {
   final Widget child;
   const TextFieldContainer({
-    Key key,
-    this.child,
-  }) : super(key: key);
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +14,10 @@ class TextFieldContainer extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       width: size.width * 0.8,
       decoration: BoxDecoration(
-        color: kPrimaryLightColor,
-        borderRadius: BorderRadius.circular(29),
+        color: Colors.white,
+        border: Border.all(color: Colors.black, width: 2),
+
+        // borderRadius: BorderRadius.circular(29),
       ),
       child: child,
     );

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Login/login_screen.dart';
-import 'package:flutter_auth/Screens/Signup/signup_screen.dart';
-import 'package:flutter_auth/Screens/Welcome/components/background.dart';
-import 'package:flutter_auth/components/rounded_button.dart';
-import 'package:flutter_auth/constants.dart';
+import '../../../Screens/Login/login_screen.dart';
+import '../../../Screens/Signup/signup_screen.dart';
+import '../../../Screens/Welcome/components/background.dart';
+import '../../components/rounded_button.dart';
+import '../../components/roll_button.dart';
+
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
@@ -16,24 +17,26 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "WELCOME TO EDU",
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Container(
+              child: Image.asset('assets/images/logo.png'),
+              height: 200,
             ),
-            SizedBox(height: size.height * 0.05),
-            SvgPicture.asset(
-              "assets/icons/chat.svg",
-              height: size.height * 0.45,
+            SizedBox(height: size.height * 0.02),
+            Text(
+              "WELCOME TO WALLET APP",
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
               text: "LOGIN",
+              color: Colors.white,
+              textColor: Colors.black,
               press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return LoginScreen(0);
                     },
                   ),
                 );
@@ -41,8 +44,8 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGN UP",
-              color: kPrimaryLightColor,
-              textColor: Colors.black,
+              color: Colors.black,
+              textColor: Colors.white,
               press: () {
                 Navigator.push(
                   context,

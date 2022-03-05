@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import '../components/text_field_container.dart';
 
-class RoundedInputField extends StatelessWidget {
+class RoundedField extends StatelessWidget {
   final String hintText;
-  final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedInputField({
+  const RoundedField({
     required this.hintText,
-    this.icon = Icons.person,
     required this.onChanged,
   });
 
@@ -18,10 +16,6 @@ class RoundedInputField extends StatelessWidget {
         onChanged: onChanged,
         cursorColor: Colors.black,
         decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: Colors.black,
-          ),
           hintText: hintText,
           border: InputBorder.none,
         ),
