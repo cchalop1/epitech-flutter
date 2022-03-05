@@ -11,7 +11,7 @@ final List<Widget> widgetOptions = <Widget>[
   const Center(
     child: Text("HOME"),
   ),
-  const SendMony(),
+  SendMony(),
   const Center(
     child: Text("PROFILE"),
   ),

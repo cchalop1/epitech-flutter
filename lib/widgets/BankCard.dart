@@ -47,7 +47,7 @@ class BankCard extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [BigText(text: "2222 2222 2222 2222")],
+            children: [BigText(text: "5440 1256 3870 4736")],
           )),
           Container(
               child: Row(

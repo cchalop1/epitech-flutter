@@ -1,42 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/components/ContactItem.dart';
+import 'package:myapp/constants/constants.dart';
+import 'package:myapp/models/Contact.dart';
 
 class SelectContacts extends StatefulWidget {
-  const SelectContacts({Key? key}) : super(key: key);
+  SelectContacts({Key? key, Contact? this.currentContact, required Function(Contact) this.selectContact}) : super(key: key);
+
+  final void Function (Contact) selectContact;
+  final Contact? currentContact;
 
   @override
   State<SelectContacts> createState() => _SelectContactsState();
 }
 
 class _SelectContactsState extends State<SelectContacts> {
-  int _selectedIndex = 0;
-
-  List<Widget> renderList() {
-    return List.generate(
-        10,
-        // TODO: extract this part to component
-        (index) => GestureDetector(
-            onTap: () {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            child: Container(
-              width: 70.0,
-              decoration: index == _selectedIndex
-                  ? BoxDecoration(
-                      color: Color.fromARGB(255, 185, 72, 64),
-                      borderRadius: BorderRadius.circular(100),
-                    )
-                  : null,
-              margin: const EdgeInsets.only(left: 5.0, right: 5.0),
-              padding: const EdgeInsets.all(5.0),
-              child: const CircleAvatar(
-                backgroundImage: AssetImage("images/fake1.jpg"),
-                radius: 30,
-              ),
-            )));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +21,9 @@ class _SelectContactsState extends State<SelectContacts> {
       margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: renderList(),
+        children: listContacts
+            .map((contact) => ContactItem(contact: contact, currentContact: widget.currentContact, selectContact: widget.selectContact))
+            .toList(),
       ),
     );
   }
