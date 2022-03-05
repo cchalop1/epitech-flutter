@@ -49,7 +49,7 @@ class _AmountInputState extends State<AmountInput> {
                 )),
             Expanded(
                 child: ElevatedButton(
-              child: const Icon(Icons.arrow_right),
+              child: const Icon(Icons.send),
               onPressed: () {
                 onPressAdd();
               },

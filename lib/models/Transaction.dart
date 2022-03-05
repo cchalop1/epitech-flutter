@@ -17,6 +17,7 @@ class Transaction {
     return "Transaction to " +
         contact.getFullName() +
         " " +
-        amount.toString() + "\$" ;
+        amount.toString() +
+        "\$";
   }
 }

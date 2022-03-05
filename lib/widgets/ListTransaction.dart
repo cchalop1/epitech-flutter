@@ -11,11 +11,14 @@ class ListTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: ListView(
-      scrollDirection: Axis.vertical,
-      children: listTransaction.reversed
-          .map((transaction) => TransactionTile(transaction: transaction))
-          .toList(),
-    ));
+        child: listTransaction.isNotEmpty
+            ? ListView(
+                scrollDirection: Axis.vertical,
+                children: listTransaction.reversed
+                    .map((transaction) =>
+                        TransactionTile(transaction: transaction))
+                    .toList(),
+              )
+            : const Center(child: Text("No transaction yet")));
   }
 }
