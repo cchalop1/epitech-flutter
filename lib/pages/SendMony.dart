@@ -3,6 +3,7 @@ import 'package:myapp/components/BigText.dart';
 import 'package:myapp/components/TitleContainer.dart';
 import 'package:myapp/constants/constants.dart';
 import 'package:myapp/models/Contact.dart';
+import 'package:myapp/models/Transaction.dart';
 import 'package:myapp/widgets/AmountInput.dart';
 import 'package:myapp/widgets/ListTransaction.dart';
 import 'package:myapp/widgets/SelectContacts.dart';
@@ -16,6 +17,7 @@ class SendMony extends StatefulWidget {
 
 class _SendMonyState extends State<SendMony> {
   Contact currentContact = listContacts[0];
+  List<Transaction> listTransaction = [];
 
   void selectContact(Contact contact) {
     setState(() {
@@ -23,9 +25,13 @@ class _SendMonyState extends State<SendMony> {
     });
   }
 
-  void createTransaction(String amount) {
-    print('create transaction with amount: $amount for contact: ' +
-        currentContact.getFullName());
+  void createTransaction(int amount) {
+    setState(() {
+      listTransaction = [
+        ...listTransaction,
+        Transaction(contact: currentContact, amount: amount)
+      ];
+    });
   }
 
   @override
@@ -42,7 +48,7 @@ class _SendMonyState extends State<SendMony> {
             AmountInput(createTransaction: createTransaction),
             const SizedBox(height: 15),
             TitleContainer(text: "Transaction history"),
-            const Expanded(child: ListTransaction()),
+            Expanded(child: ListTransaction(listTransaction: listTransaction)),
           ],
         ));
   }
