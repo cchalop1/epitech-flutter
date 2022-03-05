@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/BigText.dart';
 import 'package:myapp/components/ContactsList.dart';
+import 'package:myapp/constants/constants.dart';
+import 'package:myapp/models/Contact.dart';
 
-class Contacts extends StatelessWidget {
+class Contacts extends StatefulWidget {
   const Contacts({Key? key}) : super(key: key);
+
+  @override
+  State<Contacts> createState() => _ContactsState();
+}
+
+class _ContactsState extends State<Contacts> {
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +32,7 @@ class Contacts extends StatelessWidget {
                   )
                 ]),
           ),
-          ContactsList(),
+          Expanded(child: ContactsList(listContacts: listContacts))
         ],
       ),
     );

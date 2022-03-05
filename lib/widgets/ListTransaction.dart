@@ -6,24 +6,22 @@ class ListTransaction extends StatelessWidget {
   List<Widget> buildTransactionList() {
     return List.generate(
         8,
-        // Extract transactionn card in component
         (index) => ListTile(
               leading: Container(
-                  color: Colors.green, child: Icon(Icons.arrow_upward)),
-              title: Text('Transaction to toto'),
-              subtitle: Text('300\$'),
+                  height: 200,
+                  color: Colors.green,
+                  child: const Icon(Icons.arrow_upward)),
+              title: const Text('Transaction to toto'),
+              subtitle: const Text('300\$'),
             ));
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        // find a way to put the container bottom of the
-        // screen
-        height: 300,
         child: ListView(
-          scrollDirection: Axis.vertical,
-          children: buildTransactionList(),
-        ));
+      scrollDirection: Axis.vertical,
+      children: buildTransactionList(),
+    ));
   }
 }

@@ -21,7 +21,7 @@ class SendMony extends StatelessWidget {
             AmountInput(),
             SizedBox(height: 15), // give it width
             TitleContainer(text: "Transaction history"),
-            ListTransaction()
+            Expanded(child: ListTransaction()),
           ],
         ));
   }

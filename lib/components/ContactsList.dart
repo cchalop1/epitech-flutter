@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/components/ContactTile.dart';
+import 'package:myapp/models/Contact.dart';
 
 class ContactsList extends StatelessWidget {
-  const ContactsList({Key? key}) : super(key: key);
+  ContactsList({Key? key, required this.listContacts}) : super(key: key);
+
+  List<Contact> listContacts;
 
   @override
   Widget build(BuildContext context) {
     // render list view of contacts
-    return Expanded(
-        child: Container(
-            child: ListView(
-      scrollDirection: Axis.vertical,
-      children: List.generate(
-          10,
-          (index) => ListTile(
-                leading: Image(image: AssetImage("images/fake1.jpg")),
-                title: Text("Contact $index"),
-              )),
-    )));
+    return Container(
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: listContacts
+              .map((contact) => ContactTile(contact: contact))
+              .toList(),
+        ));
   }
 }
