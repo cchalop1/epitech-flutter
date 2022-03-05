@@ -9,11 +9,13 @@ class TransactionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: impove style
     return ListTile(
       leading: Container(
-          height: 200,
-          color: Colors.green,
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: const Color.fromARGB(99, 31, 184, 0)),
           child: const Icon(Icons.arrow_upward)),
       title: Text(transaction.toString()),
       subtitle: Text(transaction.dateTime.toString()),
