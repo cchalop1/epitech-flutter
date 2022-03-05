@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/BigText.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:myapp/components/TitleContainer.dart';
 import 'package:myapp/constants/constants.dart';
 import 'package:myapp/models/Contact.dart';
@@ -18,11 +18,17 @@ class SendMony extends StatefulWidget {
 class _SendMonyState extends State<SendMony> {
   Contact currentContact = listContacts[0];
   List<Transaction> listTransaction = [];
+  AudioPlayer audioPlayer = AudioPlayer();
 
   void selectContact(Contact contact) {
     setState(() {
       currentContact = contact;
     });
+  }
+
+  void playSound() {
+    final player = AudioCache();
+    player.play("sound.mp3");
   }
 
   void createTransaction(int amount) {
@@ -32,6 +38,7 @@ class _SendMonyState extends State<SendMony> {
         Transaction(contact: currentContact, amount: amount)
       ];
     });
+    playSound();
   }
 
   @override

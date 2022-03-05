@@ -14,10 +14,6 @@ class Transaction {
 
   @override
   String toString() {
-    return "Transaction to " +
-        contact.getFullName() +
-        " " +
-        amount.toString() +
-        "\$";
+    return amount.toString() + "\$ for " + contact.getFullName();
   }
 }

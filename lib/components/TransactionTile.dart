@@ -9,6 +9,7 @@ class TransactionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: impove style
     return ListTile(
       leading: Container(
           height: 200,

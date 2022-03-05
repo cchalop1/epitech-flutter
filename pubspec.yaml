@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.3.1
   uuid: ^3.0.6
+  audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,7 @@ flutter:
     - images/fake7.jpg
     - images/fake8.jpg
     - images/fake9.jpg
+    - assets/sound.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
