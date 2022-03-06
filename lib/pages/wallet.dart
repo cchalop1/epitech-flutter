@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/widgets/BankCard.dart';
 import 'indicator.dart';
-import '../../../Screens/Welcome/components/background.dart';
+import 'Welcome/midPage/background.dart';
 import 'package:myapp/widgets/listTransac.dart';
 
 class Wallet extends StatefulWidget {
