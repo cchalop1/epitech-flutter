@@ -37,6 +37,8 @@ dependencies:
   google_fonts: ^2.3.1
   uuid: ^3.0.6
   audioplayers: ^0.20.1
+  fl_chart: ^0.45.1
+
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,15 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/wallet.png
+    - images/transac1.png
+    - images/transac2.png
+    - images/transac3.png
+    - images/transac4.png
+
+    - images/wallet.png
+    - images/wallet.png
+    - images/wallet.png
+
     - images/fake0.jpg
     - images/fake1.jpg
     - images/fake2.jpg
@@ -74,6 +85,7 @@ flutter:
     - images/fake8.jpg
     - images/fake9.jpg
     - assets/sound.mp3
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
