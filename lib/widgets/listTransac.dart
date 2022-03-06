@@ -26,31 +26,33 @@ class ListTransac extends StatelessWidget {
         //   childAspectRatio: 2.4,
         // ),
         separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(
+          return const SizedBox(
             height: 10,
           );
         },
         itemBuilder: (context, index) {
           // final item = jsonList.toString();
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10),
-                  height: 70,
-                  child: Image.asset(
-                      "images/transac" + (index + 1).toString() + ".png")),
-              Column(
-                children: [
-                  Text(transacList[index]["name"]),
-                  Text(transacList[index]["date"])
-                ],
-              ),
-              Container(
-                margin: EdgeInsets.only(right: 10),
-                child: Text(transacList[index]["price"]),
-              ),
-            ],
+          return Card(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                    margin: EdgeInsets.only(left: 10),
+                    height: 70,
+                    child: Image.asset(
+                        "images/transac" + (index + 1).toString() + ".png")),
+                Column(
+                  children: [
+                    Text(transacList[index]["name"]),
+                    Text(transacList[index]["date"])
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(right: 10),
+                  child: Text(transacList[index]["price"]),
+                ),
+              ],
+            ),
           );
         });
   }
