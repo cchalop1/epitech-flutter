@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '/Screens/Login/login_screen.dart';
-import '/Screens/Signup/components/background.dart';
 import '../../components/already_have_an_account_acheck.dart';
 import '../../components/rounded_button.dart';
 import '../../components/rounded_input_field.dart';
@@ -8,6 +7,7 @@ import '../../components/rounded_password_field.dart';
 import 'package:http/http.dart' as http;
 import '../signup_screen.dart';
 import '../../../mainScreen.dart';
+import '/Screens/Login/components/background.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -23,12 +23,14 @@ class _BodyState extends State<Body> {
         child: Column(
           children: <Widget>[
             SizedBox(height: size.height * 0.16),
-            SizedBox(
-              width: 310,
-              child: Container(
-                child: Text(
-                  "SIGNUP",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            Center(
+              child: SizedBox(
+                width: 310,
+                child: Container(
+                  child: Text(
+                    "SIGNUP",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  ),
                 ),
               ),
             ),
