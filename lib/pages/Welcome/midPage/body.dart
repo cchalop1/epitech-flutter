@@ -3,10 +3,7 @@ import '../../Login/login_screen.dart';
 import '../../Signup/signup_screen.dart';
 import 'background.dart';
 
-import 'package:myapp/components/already_have_an_account_acheck.dart';
 import 'package:myapp/components/rounded_button.dart';
-import 'package:myapp/components/rounded_input_field.dart';
-import 'package:myapp/components/rounded_password_field.dart';
 
 class Body extends StatelessWidget {
   @override

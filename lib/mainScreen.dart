@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/Profile.dart';
 import 'package:myapp/widgets/navBar.dart';
 import 'package:myapp/pages/Contacts.dart';
 import 'package:myapp/pages/SendMony.dart';
@@ -19,19 +20,24 @@ class MainScreenState extends State<MainScreen> {
   String mail;
   String firstName;
 
-  final List<Widget> widgetOptions = <Widget>[
-    const Center(
-      child: Contacts(),
-    ),
-    const Wallet(),
-    const Center(
-      child: Text("HOME"),
-    ),
-    SendMony(),
-    const Center(
-      child: Text("PROFILE"),
-    ),
-  ];
+  List<Widget> widgetOptions = [];
+
+  @override
+  void initState() {
+    setState(() {
+      widgetOptions = <Widget>[
+        const Center(
+          child: Contacts(),
+        ),
+        const Wallet(),
+        const Center(
+          child: Text("HOME"),
+        ),
+        SendMony(),
+        Profile(firstName: firstName, mail: mail),
+      ];
+    });
+  }
 
   @override
   void updatePage(int index) {

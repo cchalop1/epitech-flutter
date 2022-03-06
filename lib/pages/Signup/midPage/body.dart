@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../Login/login_screen.dart';
-import 'package:myapp/components/already_have_an_account_acheck.dart';
 import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/components/rounded_input_field.dart';
-import 'package:myapp/components/rounded_password_field.dart';
 
-import 'package:http/http.dart' as http;
-import '../signup_screen.dart';
 import '../../../mainScreen.dart';
 import '../../Login/midPage/background.dart';
 
