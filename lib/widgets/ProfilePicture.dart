@@ -25,20 +25,31 @@ class _ProfilePictureState extends State<ProfilePicture> {
     }
   }
 
+  void takePicture(ImageSource source) async {
+    final XFile? photo = await _picker.pickImage(source: source);
+
+    if (photo != null) {
+      await photo.saveTo("/storage/emulated/0/Pictures/profile_picture.jpg");
+      setState(() {
+        _image = File("/storage/emulated/0/Pictures/profile_picture.jpg");
+      });
+    }
+  }
+
+  void deletePicture() {
+    if (_image != null) {
+      _image!.delete();
+      setState(() {
+        _image = null;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        final XFile? photo =
-            await _picker.pickImage(source: ImageSource.camera);
-
-        if (photo != null) {
-          await photo
-              .saveTo("/storage/emulated/0/Pictures/profile_picture.jpg");
-          setState(() {
-            _image = File("/storage/emulated/0/Pictures/profile_picture.jpg");
-          });
-        }
+        takePicture(ImageSource.camera);
       },
       child: Row(children: [
         Container(
@@ -56,17 +67,14 @@ class _ProfilePictureState extends State<ProfilePicture> {
         ),
         Column(
           children: [
-            ElevatedButton(onPressed: () async {}, child: Text("Galery")),
             ElevatedButton(
-                onPressed: () {
-                  if (_image != null) {
-                    _image!.delete();
-                    setState(() {
-                      _image = null;
-                    });
-                  }
+                onPressed: () async {
+                  takePicture(ImageSource.gallery);
                 },
-                child: Text("Delete")),
+                child: Text("Galery")),
+            ElevatedButton(onPressed: () {
+              deletePicture();
+            }, child: Text("Delete")),
           ],
         ),
       ]),

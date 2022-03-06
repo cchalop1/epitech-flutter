@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BigText extends StatelessWidget {
-  BigText({Key? key, required this.text}) : super(key: key);
+class MediumText extends StatelessWidget {
+  MediumText({Key? key, required this.text}) : super(key: key);
 
   String text;
 
@@ -11,7 +11,7 @@ class BigText extends StatelessWidget {
     return Text(
       text,
       style: GoogleFonts.roboto(
-        fontSize: 22,
+        fontSize: 18,
         fontWeight: FontWeight.w500,
       ),
     );
