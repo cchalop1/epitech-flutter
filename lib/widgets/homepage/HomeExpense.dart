@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/BigText.dart';
 import 'package:myapp/components/homepage/HomeChart.dart';
+import 'package:myapp/constants/pieChartExpenses.dart';
 
 class HomeExpense extends StatelessWidget {
   const HomeExpense({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class HomeExpense extends StatelessWidget {
           ),
           Container(
             height: 100,
-            child: HomeChart(title: "chart"),
+            child: HomeChart(expenses: listExpenses),
           )
         ],
       ),

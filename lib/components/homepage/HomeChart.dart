@@ -4,16 +4,15 @@ import 'package:fl_chart/fl_chart.dart';
 // import 'indicator.dart';
 // import 'PieChartIndicator.dart';
 import 'HomeChartIndicator.dart';
+import 'package:myapp/constants/pieChartExpenses.dart';
+import 'package:myapp/models/Expenses.dart';
 
-class HomeChart extends StatefulWidget {
-  const HomeChart({Key? key, required this.title}) : super(key: key);
-  final String title;
+class HomeChart extends StatelessWidget {
+  HomeChart({Key? key, required this.expenses}) : super(key: key);
 
-  @override
-  _MyHomeChartState createState() => _MyHomeChartState();
-}
-class _MyHomeChartState extends State<HomeChart> {
-    int touchedIndex = -1;
+  final List<Expenses> expenses;
+
+  int touchedIndex = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +21,26 @@ class _MyHomeChartState extends State<HomeChart> {
       children: [
         Expanded (child: Container(
           height: double.infinity, width: double.infinity,
-          child: HomeChartIndicators(),
+          child: HomeChartIndicators(expenses: expenses),
         )),
         Expanded (child: Container(
           height: double.infinity, width: double.infinity,
           child: PieChart(
             PieChartData(
-                sections: showingSections()
+                // sections: showingSections()
+                sections: expenses
+                  .map((e) => PieChartSectionData(
+                     color: e.getColor(),
+                      value: e.getValue().toDouble(),
+                      title: e.getShortTitle(),
+                      radius: 50.0,
+                      titleStyle: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xffffffff)),
+                    )
+                  )
+                  .toList()
             ),
             swapAnimationDuration: Duration(milliseconds: 150), // Optional
             swapAnimationCurve: Curves.linear,
@@ -36,53 +48,5 @@ class _MyHomeChartState extends State<HomeChart> {
         )),
       ] // Optional
     );
-  }
-
-// }
- List<PieChartSectionData> showingSections() {
-    return List.generate(3, (i) {
-      final isTouched = i == touchedIndex;
-      final fontSize = isTouched ? 25.0 : 16.0;
-      // final fontSize =  16.0;
-      final radius = isTouched ? 60.0 : 50.0;
-      // final radius = 50.0;
-      switch (i) {
-        case 0:
-          return PieChartSectionData(
-            color: const Color(0xff0293ee),
-            value: 50,
-            title: '50%',
-            radius: radius,
-            titleStyle: TextStyle(
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xffffffff)),
-          );
-        case 1:
-          return PieChartSectionData(
-            color: const Color(0xfff8b250),
-            value: 35,
-            title: '35%',
-            radius: radius,
-            titleStyle: TextStyle(
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xffffffff)),
-          );
-        case 2:
-          return PieChartSectionData(
-            color: const Color(0xff845bef),
-            value: 25,
-            title: '25%',
-            radius: radius,
-            titleStyle: TextStyle(
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xffffffff)),
-          );
-        default:
-          throw Error();
-      }
-    });
   }
 }
