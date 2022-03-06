@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Screens/Welcome/welcome_screen.dart';
 import 'package:myapp/widgets/navBar.dart';
-import 'package:myapp/routes/bottomNav.dart';
+import 'package:myapp/pages/Contacts.dart';
+import 'package:myapp/pages/SendMony.dart';
+import 'package:myapp/Screens/wallet.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
-
+  const MainScreen({required this.mail, Key? key}) : super(key: key);
+  final String mail;
   @override
-  State<MainScreen> createState() => MainScreenState();
+  State<MainScreen> createState() => MainScreenState(mail);
 }
 
 class MainScreenState extends State<MainScreen> {
+  MainScreenState(this.mail);
+  String mail;
+  final List<Widget> widgetOptions = <Widget>[
+    const Center(
+      child: Contacts(),
+    ),
+    const Wallet(),
+    const Center(
+      child: Text("HOME"),
+    ),
+    SendMony(),
+    const Center(
+      child: Text("PROFILE"),
+    ),
+  ];
+
   @override
   void updatePage(int index) {
     setState(() {
@@ -26,7 +43,7 @@ class MainScreenState extends State<MainScreen> {
         title: const Text('Welcome to Flutter'),
       ),
       bottomNavigationBar: NavBar(place: place, updatePage: updatePage),
-      body: widgetOptions.elementAt(place), //const BankCard(),
+      body: widgetOptions.elementAt(place),
     );
   }
 }

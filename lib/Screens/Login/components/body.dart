@@ -11,27 +11,21 @@ import 'dart:convert';
 import '../../../mainScreen.dart';
 
 class Body extends StatefulWidget {
-  Body(this.newStatus);
-  var newStatus;
+  Body();
 
   @override
-  State<Body> createState() => _BodyState(newStatus);
+  State<Body> createState() => _BodyState();
 }
 
 class _BodyState extends State<Body> {
-  var email;
-  var password;
-  var newStatus = 0;
-  var saveStates;
-
-  var lel;
-  _BodyState(this.saveStates) {
+  _BodyState() {
     // newStatus = widget.newStatus;
   }
   @override
   List<dynamic> jsonList = [];
 
   int fillForm = 0;
+  String email = "";
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,10 +46,16 @@ class _BodyState extends State<Body> {
             ),
             RoundedInputField(
               hintText: "Your Email",
-              onChanged: (value) {},
+              onChanged: (value) {
+                setState(() {
+                  email = value;
+                });
+              },
             ),
             RoundedPasswordField(onChanged: (value) {
-              setState(() {});
+              setState(() {
+                email = value;
+              });
             }),
             RoundedButton(
               text: "LOG IN",
@@ -64,7 +64,7 @@ class _BodyState extends State<Body> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return MainScreen();
+                      return MainScreen(mail: email);
                     },
                   ),
                 );
