@@ -4,14 +4,17 @@ import 'package:myapp/widgets/ProfileName.dart';
 import 'package:myapp/widgets/ProfilePicture.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+  const Profile({Key? key, required this.firstName, required this.mail})
+      : super(key: key);
+
+  final String firstName;
+  final String mail;
 
   @override
   State<Profile> createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +24,7 @@ class _ProfileState extends State<Profile> {
       children: [
         TitleContainer(text: "Profile"),
         Center(child: ProfilePicture()),
-        const Center(child: ProfileName())
+        Center(child: ProfileName(firstName: widget.firstName, mail: widget.mail)),
       ],
     ));
   }
