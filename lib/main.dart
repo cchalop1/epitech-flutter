@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Screens/Welcome/welcome_screen.dart';
 import 'package:myapp/widgets/navBar.dart';
 import 'package:myapp/routes/bottomNav.dart';
 
@@ -26,12 +27,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 185, 72, 64),
-          title: const Text('Welcome to Flutter'),
-        ),
-        bottomNavigationBar: NavBar(place: place, updatePage: updatePage),
-        body: widgetOptions.elementAt(place), //const BankCard(),
+        // appBar: AppBar(
+        //   backgroundColor: const Color.fromARGB(255, 185, 72, 64),
+        //   title: const Text('Welcome to Flutter'),
+        // ),
+        // bottomNavigationBar: NavBar(place: place, updatePage: updatePage),
+        //body: widgetOptions.elementAt(place), //const BankCard(),
+        body: WelcomeScreen(),
       ),
     );
   }

@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/BankCard.dart';
+// import 'package:myapp/widgets/BankCard.dart';
 import 'package:myapp/pages/HomePage.dart';
+import 'package:myapp/pages/Contacts.dart';
+import 'package:myapp/pages/SendMony.dart';
+import 'package:myapp/Screens/wallet.dart';
 
 final List<Widget> widgetOptions = <Widget>[
   const Center(
-    child: Text("CONTACTS"),
+    child: Contacts(),
   ),
-  const BankCard(),
+  Wallet(),
   const HomePage(),
-  // const Center(
-  //   child: Text("HOME"),
-  // ),
-  const Center(
-    child: Text("SEND MONEY"),
-  ),
+  SendMony(),
   const Center(
     child: Text("PROFILE"),
   ),
