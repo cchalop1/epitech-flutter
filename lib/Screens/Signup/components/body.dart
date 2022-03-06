@@ -16,6 +16,7 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   String email = "";
+  String firstName = "";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -47,7 +48,9 @@ class _BodyState extends State<Body> {
             RoundedInputField(
               hintText: "Your first name",
               onChanged: (value) {
-                setState(() {});
+                setState(() {
+                  firstName = value;
+                });
               },
             ),
             RoundedButton(
@@ -57,7 +60,10 @@ class _BodyState extends State<Body> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return MainScreen(mail: email);
+                        return MainScreen(
+                          mail: email,
+                          firstName: firstName,
+                        );
                       },
                     ),
                   );

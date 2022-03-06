@@ -22,10 +22,8 @@ class _BodyState extends State<Body> {
     // newStatus = widget.newStatus;
   }
   @override
-  List<dynamic> jsonList = [];
-
-  int fillForm = 0;
   String email = "";
+  String firstName = "";
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,6 +50,14 @@ class _BodyState extends State<Body> {
                 });
               },
             ),
+            RoundedInputField(
+              hintText: "Your firstname",
+              onChanged: (value) {
+                setState(() {
+                  firstName = value;
+                });
+              },
+            ),
             RoundedPasswordField(onChanged: (value) {
               setState(() {
                 email = value;
@@ -64,7 +70,10 @@ class _BodyState extends State<Body> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return MainScreen(mail: email);
+                      return MainScreen(
+                        mail: email,
+                        firstName: firstName,
+                      );
                     },
                   ),
                 );

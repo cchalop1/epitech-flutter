@@ -5,15 +5,20 @@ import 'package:myapp/pages/SendMony.dart';
 import 'package:myapp/Screens/wallet.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({required this.mail, Key? key}) : super(key: key);
+  const MainScreen({required this.mail, required this.firstName, Key? key})
+      : super(key: key);
   final String mail;
+  final String firstName;
+
   @override
-  State<MainScreen> createState() => MainScreenState(mail);
+  State<MainScreen> createState() => MainScreenState(mail, firstName);
 }
 
 class MainScreenState extends State<MainScreen> {
-  MainScreenState(this.mail);
+  MainScreenState(this.mail, this.firstName);
   String mail;
+  String firstName;
+
   final List<Widget> widgetOptions = <Widget>[
     const Center(
       child: Contacts(),
