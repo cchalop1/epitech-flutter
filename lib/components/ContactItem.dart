@@ -28,7 +28,7 @@ class _ContactItemState extends State<ContactItem> {
           width: 70.0,
           decoration: widget.contact.getId() == widget.currentContact?.getId()
               ? BoxDecoration(
-                  color: Color.fromARGB(255, 185, 72, 64),
+                  color: Colors.red,
                   borderRadius: BorderRadius.circular(100),
                 )
               : null,

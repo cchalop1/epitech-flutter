@@ -25,9 +25,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcome to Flutter',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        bottomAppBarColor: Colors.red,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 185, 72, 64),
+          // backgroundColor: const Color.fromARGB(255, 185, 72, 64),
           title: const Text('Welcome to Flutter'),
         ),
         bottomNavigationBar: NavBar(place: place, updatePage: updatePage),
