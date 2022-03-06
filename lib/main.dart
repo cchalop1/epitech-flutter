@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Screens/Welcome/welcome_screen.dart';
+import 'package:myapp/pages/Welcome/welcome_screen.dart';
 import 'package:myapp/widgets/navBar.dart';
-import 'package:myapp/routes/bottomNav.dart';
 
 void main() {
   runApp(MyApp());

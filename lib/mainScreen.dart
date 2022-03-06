@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/widgets/navBar.dart';
 import 'package:myapp/pages/Contacts.dart';
 import 'package:myapp/pages/SendMony.dart';
-import 'package:myapp/Screens/wallet.dart';
+import 'package:myapp/pages/wallet.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({required this.mail, required this.firstName, Key? key})
