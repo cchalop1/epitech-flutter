@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '/Screens/Login/components/body.dart';
+
+import 'midPage/body.dart';
 
 class LoginScreen extends StatefulWidget {
   var statusConnect;

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import '/Screens/Login/login_screen.dart';
-import '../../components/already_have_an_account_acheck.dart';
-import '../../components/rounded_button.dart';
-import '../../components/rounded_input_field.dart';
-import '../../components/rounded_password_field.dart';
+import '../../Login/login_screen.dart';
+import 'package:myapp/components/already_have_an_account_acheck.dart';
+import 'package:myapp/components/rounded_button.dart';
+import 'package:myapp/components/rounded_input_field.dart';
+import 'package:myapp/components/rounded_password_field.dart';
+
 import 'package:http/http.dart' as http;
 import '../signup_screen.dart';
 import '../../../mainScreen.dart';
-import '/Screens/Login/components/background.dart';
+import '../../Login/midPage/background.dart';
 
 class Body extends StatefulWidget {
   @override
