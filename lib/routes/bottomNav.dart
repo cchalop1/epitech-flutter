@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/Contacts.dart';
+import 'package:myapp/pages/Profile.dart';
 import 'package:myapp/pages/SendMony.dart';
 import 'package:myapp/Screens/wallet.dart';
 
@@ -12,7 +13,5 @@ final List<Widget> widgetOptions = <Widget>[
     child: Text("HOME"),
   ),
   SendMony(),
-  const Center(
-    child: Text("PROFILE"),
-  ),
+  Profile(),
 ];
