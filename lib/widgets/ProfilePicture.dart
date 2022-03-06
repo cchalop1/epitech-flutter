@@ -53,8 +53,8 @@ class _ProfilePictureState extends State<ProfilePicture> {
       },
       child: Row(children: [
         Container(
-          width: 180,
-          height: 180,
+          width: MediaQuery.of(context).size.height * 0.2,
+          height: MediaQuery.of(context).size.height * 0.2,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(

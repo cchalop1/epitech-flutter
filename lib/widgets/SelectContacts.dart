@@ -17,7 +17,7 @@ class _SelectContactsState extends State<SelectContacts> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70.0,
+      height: MediaQuery.of(context).size.height * 0.1,
       margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
       child: ListView(
         scrollDirection: Axis.horizontal,
