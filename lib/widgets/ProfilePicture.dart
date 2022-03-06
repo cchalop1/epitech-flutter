@@ -13,7 +13,17 @@ class ProfilePicture extends StatefulWidget {
 class _ProfilePictureState extends State<ProfilePicture> {
   final ImagePicker _picker = ImagePicker();
 
-  File? _image = File("/storage/emulated/0/Pictures/profile_picture.jpg");
+  File? _image;
+
+  @override
+  void initState() {
+    File file = File("/storage/emulated/0/Pictures/profile_picture.jpg");
+    if (file.existsSync()) {
+      setState(() {
+        _image = file;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
