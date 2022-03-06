@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import '/Screens/Login/login_screen.dart';
 import '/Screens/Signup/components/background.dart';
-import '/Screens/Signup/components/social_icon.dart';
 import '../../components/already_have_an_account_acheck.dart';
 import '../../components/rounded_button.dart';
 import '../../components/rounded_input_field.dart';
 import '../../components/rounded_password_field.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
 import '../signup_screen.dart';
 import '../../../mainScreen.dart';

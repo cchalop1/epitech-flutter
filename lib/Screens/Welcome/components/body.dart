@@ -5,8 +5,6 @@ import '../../../Screens/Welcome/components/background.dart';
 import '../../components/rounded_button.dart';
 import '../../components/roll_button.dart';
 
-import 'package:flutter_svg/svg.dart';
-
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Image.asset('assets/images/logo.png'),
+              child: Image.asset('images/wallet.png'),
               height: 200,
             ),
             SizedBox(height: size.height * 0.02),
