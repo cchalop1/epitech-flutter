@@ -13,10 +13,11 @@ class BankCard extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
       height: 220,
       constraints: const BoxConstraints.expand(height: 220),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: const Color.fromARGB(255, 196, 195, 195),
-      ),
+      // decoration: BoxDecoration(
+      //   borderRadius: BorderRadius.circular(15),
+      //   color: const Color.fromARGB(255, 196, 195, 195),
+      // ),
+      decoration: BDPrincipale,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

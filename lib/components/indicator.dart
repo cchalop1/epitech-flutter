@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/themes/Style.dart';
 
 class Indicator extends StatelessWidget {
   final Color color;
@@ -33,8 +34,7 @@ class Indicator extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.bold, color: textColor),
+          style: TxtChartIndicatorStyle,
         )
       ],
     );

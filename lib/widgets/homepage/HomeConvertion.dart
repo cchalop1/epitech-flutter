@@ -22,16 +22,8 @@ class HomeConvertionState extends State {
   Widget build(BuildContext context) {
     return  Container(
       margin: const EdgeInsets.all(15),
-      // padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
       height: 220,
-      // constraints: const BoxConstraints.expand(height: 200),
-      // decoration: BoxDecoration(
-      //   borderRadius: BorderRadius.circular(15),
-      //   color: const Color.fromARGB(255, 196, 195, 195),
-      // ),
       child: Column (
-        // crossAxisAlignment: CrossAxisAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             height: 30,
@@ -65,11 +57,7 @@ class HomeConvertionState extends State {
                 Expanded(child: Container (
                     margin: const EdgeInsets.all(5),
                     height: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: BGLiteGreenColor,
-                      // color: const Color.fromARGB(255, 196, 195, 195),
-                    ),
+                    decoration: BDSmallCircularGreen,
                     child : Align(alignment: Alignment.center, child: Text(
                       myMoney.toString() + " \$",
                       textAlign: TextAlign.center,
@@ -79,11 +67,7 @@ class HomeConvertionState extends State {
                 Expanded(child: Container (
                     margin: const EdgeInsets.all(5),
                     height: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: BGRedColor,
-                      // color: const Color.fromARGB(255, 196, 195, 195),
-                    ),
+                    decoration: BDSmallCircularRed,
                     child : Align(alignment: Alignment.center, child: Text(
                       newMoney.toStringAsFixed(3),
                       textAlign: TextAlign.center,

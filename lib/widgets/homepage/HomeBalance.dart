@@ -13,11 +13,7 @@ class HomeBalance extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
       height: 220,
       constraints: const BoxConstraints.expand(height: 80),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: BGLiteGreenColor,
-        // color: const Color.fromARGB(255, 196, 195, 195),
-      ),
+      decoration: BDPrincipale,
       child: Column (
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -34,18 +30,8 @@ class HomeBalance extends StatelessWidget {
               Container(
                   padding: const EdgeInsets.only(top: 2),
                   child: BigText(text: "\$ 54, 084.31"),
-                    // Text(
-                    //   "\$ 50, 000.00",
-                    //   style: GoogleFonts.roboto(
-                    //     fontSize: 15,
-                    //     fontWeight: FontWeight.w500,
-                    //   ),
-                    // )
                   ),
             ]),
-            // Container(
-            //     padding: const EdgeInsets.all(5),
-            //     child: const Icon(Icons.account_balance_wallet)),
           ]),
         ],
       ),

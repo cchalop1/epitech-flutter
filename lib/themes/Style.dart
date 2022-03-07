@@ -30,4 +30,21 @@ double GFVeryBigFontSize = 25;
 FontWeight GFSmallFontWeight = FontWeight.w300;
 FontWeight GFBigFontWeight = FontWeight.w500;
 
-// Define the principale Box Decoration
+// Define the principals Box Decoration
+
+BoxDecoration BDPrincipale = BoxDecoration(
+  borderRadius: BorderRadius.circular(15),
+  color: BGGreyColor,
+);
+
+BoxDecoration BDSmallCircularGreen = BoxDecoration(
+  borderRadius: BorderRadius.circular(10),
+  color: BGLiteGreenColor,
+);
+
+BoxDecoration BDSmallCircularRed = BoxDecoration(
+  borderRadius: BorderRadius.circular(10),
+  color: BGRedColor,
+);
+
+// Define other things
