@@ -67,7 +67,7 @@ class HomeConvertionState extends State {
                     height: 100,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: CardColor,
+                      color: BGLiteGreenColor,
                       // color: const Color.fromARGB(255, 196, 195, 195),
                     ),
                     child : Align(alignment: Alignment.center, child: Text(
@@ -81,7 +81,7 @@ class HomeConvertionState extends State {
                     height: 100,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: CardColor,
+                      color: BGRedColor,
                       // color: const Color.fromARGB(255, 196, 195, 195),
                     ),
                     child : Align(alignment: Alignment.center, child: Text(

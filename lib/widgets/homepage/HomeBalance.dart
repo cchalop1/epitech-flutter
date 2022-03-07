@@ -15,7 +15,7 @@ class HomeBalance extends StatelessWidget {
       constraints: const BoxConstraints.expand(height: 80),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: CardColor,
+        color: BGLiteGreenColor,
         // color: const Color.fromARGB(255, 196, 195, 195),
       ),
       child: Column (
@@ -26,8 +26,8 @@ class HomeBalance extends StatelessWidget {
               Text(
                 'My Balance',
                 style: GoogleFonts.robotoMono(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w300,
+                  fontSize: GFSmallFontSize,
+                  fontWeight: GFSmallFontWeight,
                   color: Colors.black,
                 ),
               ),

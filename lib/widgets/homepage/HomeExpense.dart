@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/BigText.dart';
 import 'package:myapp/components/homepage/HomeChart.dart';
 import 'package:myapp/constants/pieChartExpenses.dart';
+import 'package:myapp/themes/Style.dart';
 
 class HomeExpense extends StatelessWidget {
   const HomeExpense({Key? key}) : super(key: key);
@@ -26,8 +27,8 @@ class HomeExpense extends StatelessWidget {
             child : Text(
               'Expenses',
               style: GoogleFonts.robotoMono(
-                fontSize: 13,
-                fontWeight: FontWeight.w300,
+                fontSize: GFSmallFontSize,
+                fontWeight: GFSmallFontWeight,
                 color: Colors.black,
               ),
             )

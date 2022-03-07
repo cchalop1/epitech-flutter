@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/BigText.dart';
+import 'package:myapp/themes/Style.dart';
 
 class BankCard extends StatelessWidget {
   const BankCard({Key? key}) : super(key: key);
@@ -24,8 +25,8 @@ class BankCard extends StatelessWidget {
               Text(
                 'CURRENT BALANCE',
                 style: GoogleFonts.robotoMono(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w300,
+                  fontSize: GFSmallFontSize,
+                  fontWeight: GFSmallFontWeight,
                   color: Colors.black,
                 ),
               ),
@@ -34,8 +35,8 @@ class BankCard extends StatelessWidget {
                   child: Text(
                     "\$ 50, 000.00",
                     style: GoogleFonts.roboto(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
+                      fontSize: GFNormalFontSize,
+                      fontWeight: GFBigFontWeight,
                     ),
                   )),
             ]),
@@ -56,8 +57,8 @@ class BankCard extends StatelessWidget {
               Text(
                 "Epitech Flutter",
                 style: GoogleFonts.robotoMono(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w300,
+                  fontSize: GFSmallFontSize,
+                  fontWeight: GFSmallFontWeight,
                   color: Colors.black,
                 ),
               ),
@@ -66,8 +67,8 @@ class BankCard extends StatelessWidget {
                   Text(
                     "EXPIRY",
                     style: GoogleFonts.robotoMono(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w300,
+                      fontSize: GFSmallFontSize,
+                      fontWeight: GFSmallFontWeight,
                       color: Colors.black,
                     ),
                   ),
@@ -75,8 +76,8 @@ class BankCard extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 2),
                     child: Text("09/24",
                         style: GoogleFonts.roboto(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
+                          fontSize: GFNormalFontSize,
+                          fontWeight: GFBigFontWeight,
                         )),
                   )
                 ],

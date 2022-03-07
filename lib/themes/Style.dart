@@ -1,10 +1,33 @@
 import 'package:flutter/material.dart';
 
-Color CardColor = Color.fromARGB(146, 184, 197, 172);
-Color PrincipaleTitleColor = Color.fromARGB(255, 61, 29, 3);
-Color TitleColor = Color.fromARGB(255, 0, 0, 0);
-Color BackgroundOneColor = Color.fromARGB(255, 117, 255, 140);
-Color BackgroundTwoColor = Color.fromARGB(255, 245, 223, 125);
-Color BackgroundThreeColor = Color.fromARGB(255, 221, 44, 0);
+// Define the background color for the application
 
+Color BGWhiteColor = Color(0xffe4e4e4);
+Color BGGreyColor = Color(0xffa5a5a6);
+Color BGDarkGreenColor = Color(0xff2c5a56);
+Color BGRedColor = Color(0xff931f13);
+Color BGOrangeColor = Color(0xffc68448);
+Color BGLiteGreenColor = Color(0xff698b8b);
+Color BGBrownColor = Color(0xff47201e);
 
+// Define the style for the Chart Design
+
+TextStyle TxtChartIndicatorStyle = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.bold,
+  // color: Color(0xff505050),
+  color: BGBrownColor,
+);
+
+// Define The Google Fonts
+
+double GFSmallFontSize = 13;
+double GFNormalFontSize = 15;
+double GFMediumFontSize = 18;
+double GFBigFontSize = 22;
+double GFVeryBigFontSize = 25;
+
+FontWeight GFSmallFontWeight = FontWeight.w300;
+FontWeight GFBigFontWeight = FontWeight.w500;
+
+// Define the principale Box Decoration
