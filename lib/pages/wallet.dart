@@ -15,15 +15,28 @@ class Wallet extends StatefulWidget {
 class WalletState extends State {
   @override
   Widget build(BuildContext context) {
-    return Background(
-      child: SingleChildScrollView(
-        child: Column(
-          //mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            BankCard(),
-            Graph(),
-            ListTransac(),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("More wallet"),
+        leading: BackButton(
+            onPressed: () => {
+                  //     supFile(),
+
+                  Navigator.pop(context, false),
+                }),
+      ),
+      body: Background(
+        child: SingleChildScrollView(
+          child: Column(
+            //mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              BankCard(),
+              Graph(),
+              ListTransac(
+                length: 4,
+              ),
+            ],
+          ),
         ),
       ),
     );

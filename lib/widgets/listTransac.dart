@@ -10,15 +10,15 @@ List<Map> transacList = [
 ];
 
 class ListTransac extends StatelessWidget {
-  const ListTransac({Key? key}) : super(key: key);
-
+  const ListTransac({required this.length, Key? key}) : super(key: key);
+  final length;
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         //controller: _scrollController,
-        itemCount: transacList.length,
+        itemCount: length,
         // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         //   crossAxisCount: 1,
         //   crossAxisSpacing: defaultPadding,
