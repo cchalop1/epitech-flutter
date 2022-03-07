@@ -57,6 +57,7 @@ class MainScreenState extends State<MainScreen> {
   int place = 2;
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: BGWhiteColor,
       appBar: AppBar(
         // backgroundColor: const Color.fromARGB(255, 185, 72, 64),
         backgroundColor: BGRedColor,
