@@ -66,9 +66,7 @@ class _BodyState extends State<Body> {
               },
             ),
             RoundedPasswordField(onChanged: (value) {
-              setState(() {
-                email = value;
-              });
+              setState(() {});
             }),
             RoundedButton(
               text: "LOG IN",
