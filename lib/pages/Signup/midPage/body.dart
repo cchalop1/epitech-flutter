@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/components/rounded_input_field.dart';
+import 'package:myapp/components/rounded_password_field.dart';
 
 import '../../../mainScreen.dart';
 import '../../Login/midPage/background.dart';
@@ -58,6 +59,9 @@ class _BodyState extends State<Body> {
                 });
               },
             ),
+            RoundedPasswordField(onChanged: (value) {
+              setState(() {});
+            }),
             RoundedButton(
                 text: "SIGNUP",
                 press: () {
