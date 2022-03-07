@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // import 'package:myapp/components/BigText.dart';
 import 'package:myapp/constants/devisesList.dart';
 import 'package:myapp/models/Devise.dart';
+import 'package:myapp/themes/Style.dart';
+
 
 class HomeConvertion extends StatefulWidget {
   HomeConvertion({Key? key}) : super(key: key);
@@ -60,8 +62,34 @@ class HomeConvertionState extends State {
             // child: displayDevises(),
             child: Row(
               children: [
-                Expanded(child: Text(myMoney.toString() + " \$", textAlign: TextAlign.center,)),
-                Expanded(child: Text(newMoney.toStringAsFixed(3), textAlign: TextAlign.center,)),
+                Expanded(child: Container (
+                    margin: const EdgeInsets.all(5),
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: CardColor,
+                      // color: const Color.fromARGB(255, 196, 195, 195),
+                    ),
+                    child : Align(alignment: Alignment.center, child: Text(
+                      myMoney.toString() + " \$",
+                      textAlign: TextAlign.center,
+                    ))
+                  )
+                ),
+                Expanded(child: Container (
+                    margin: const EdgeInsets.all(5),
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: CardColor,
+                      // color: const Color.fromARGB(255, 196, 195, 195),
+                    ),
+                    child : Align(alignment: Alignment.center, child: Text(
+                      newMoney.toStringAsFixed(3),
+                      textAlign: TextAlign.center,
+                    ))
+                  ),
+                )
               ],
             ),
           )

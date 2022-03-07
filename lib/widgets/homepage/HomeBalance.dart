@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/BigText.dart';
+import 'package:myapp/themes/Style.dart';
 
 class HomeBalance extends StatelessWidget {
   const HomeBalance({Key? key}) : super(key: key);
@@ -14,7 +15,8 @@ class HomeBalance extends StatelessWidget {
       constraints: const BoxConstraints.expand(height: 80),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: const Color.fromARGB(255, 196, 195, 195),
+        color: CardColor,
+        // color: const Color.fromARGB(255, 196, 195, 195),
       ),
       child: Column (
         crossAxisAlignment: CrossAxisAlignment.start,
