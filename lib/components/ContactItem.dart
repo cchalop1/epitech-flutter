@@ -25,7 +25,7 @@ class _ContactItemState extends State<ContactItem> {
           widget.selectContact(widget.contact);
         },
         child: Container(
-          width: 70.0,
+          width: MediaQuery.of(context).size.height * 0.1,
           decoration: widget.contact.getId() == widget.currentContact?.getId()
               ? BoxDecoration(
                   color: Color.fromARGB(255, 185, 72, 64),

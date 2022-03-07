@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../Screens/Login/login_screen.dart';
-import '../../../Screens/Signup/signup_screen.dart';
-import '../../../Screens/Welcome/components/background.dart';
-import '../../components/rounded_button.dart';
-import '../../components/roll_button.dart';
+import '../../Login/login_screen.dart';
+import '../../Signup/signup_screen.dart';
+import 'background.dart';
+
+import 'package:myapp/components/rounded_button.dart';
 
 class Body extends StatelessWidget {
   @override

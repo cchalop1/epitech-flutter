@@ -1,21 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Screens/Welcome/welcome_screen.dart';
+import 'package:myapp/pages/Profile.dart';
+import 'package:myapp/pages/Welcome/welcome_screen.dart';
 import 'package:myapp/widgets/navBar.dart';
-import 'package:myapp/routes/bottomNav.dart';
+import 'package:myapp/pages/Contacts.dart';
+import 'package:myapp/pages/SendMony.dart';
+import 'package:myapp/pages/wallet.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({required this.mail, required this.firstName, Key? key})
+      : super(key: key);
+  final String mail;
+  final String firstName;
 
   @override
-  State<MainScreen> createState() => MainScreenState();
+  State<MainScreen> createState() => MainScreenState(mail, firstName);
 }
 
 class MainScreenState extends State<MainScreen> {
+  MainScreenState(this.mail, this.firstName);
+  String mail;
+  String firstName;
+
+  List<Widget> widgetOptions = [];
+
+  @override
+  void initState() {
+    setState(() {
+      widgetOptions = <Widget>[
+        const Center(
+          child: Contacts(),
+        ),
+        const Wallet(),
+        const Center(
+          child: Text("HOME"),
+        ),
+        SendMony(),
+        Profile(firstName: firstName, mail: mail),
+      ];
+    });
+  }
+
   @override
   void updatePage(int index) {
     setState(() {
       place = index;
     });
+  }
+
+  void removeData() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    await prefs.remove('counter');
   }
 
   int place = 2;
@@ -24,9 +60,23 @@ class MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 185, 72, 64),
         title: const Text('Welcome to Flutter'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            removeData();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return WelcomeScreen();
+                },
+              ),
+            );
+          },
+        ),
       ),
       bottomNavigationBar: NavBar(place: place, updatePage: updatePage),
-      body: widgetOptions.elementAt(place), //const BankCard(),
+      body: widgetOptions.elementAt(place),
     );
   }
 }

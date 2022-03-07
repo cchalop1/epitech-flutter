@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
-import '/Screens/Login/components/background.dart';
-import '/Screens/Signup/signup_screen.dart';
-import '../../components/already_have_an_account_acheck.dart';
-import '../../components/rounded_button.dart';
-import '../../components/rounded_input_field.dart';
-import '../../components/rounded_password_field.dart';
-import '../login_screen.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'background.dart';
+import '../../Signup/signup_screen.dart';
+import 'package:myapp/components/already_have_an_account_acheck.dart';
+import 'package:myapp/components/rounded_button.dart';
+import 'package:myapp/components/rounded_input_field.dart';
+import 'package:myapp/components/rounded_password_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../../mainScreen.dart';
 
 class Body extends StatefulWidget {
-  Body(this.newStatus);
-  var newStatus;
+  Body();
 
   @override
-  State<Body> createState() => _BodyState(newStatus);
+  State<Body> createState() => _BodyState();
 }
 
 class _BodyState extends State<Body> {
-  var email;
-  var password;
-  var newStatus = 0;
-  var saveStates;
-
-  var lel;
-  _BodyState(this.saveStates) {
+  _BodyState() {
     // newStatus = widget.newStatus;
   }
-  @override
-  List<dynamic> jsonList = [];
+  _save() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString("name", firstName);
+    prefs.setString("mail", email);
 
-  int fillForm = 0;
+    prefs.setInt("isConnect", 1);
+  }
+
+  @override
+  String email = "";
+  String firstName = "";
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,7 +51,19 @@ class _BodyState extends State<Body> {
             ),
             RoundedInputField(
               hintText: "Your Email",
-              onChanged: (value) {},
+              onChanged: (value) {
+                setState(() {
+                  email = value;
+                });
+              },
+            ),
+            RoundedInputField(
+              hintText: "Your firstname",
+              onChanged: (value) {
+                setState(() {
+                  firstName = value;
+                });
+              },
             ),
             RoundedPasswordField(onChanged: (value) {
               setState(() {});
@@ -60,11 +71,15 @@ class _BodyState extends State<Body> {
             RoundedButton(
               text: "LOG IN",
               press: () {
+                _save();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return MainScreen();
+                      return MainScreen(
+                        mail: email,
+                        firstName: firstName,
+                      );
                     },
                   ),
                 );

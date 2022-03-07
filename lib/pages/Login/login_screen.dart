@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '/Screens/Login/components/body.dart';
+
+import 'midPage/body.dart';
 
 class LoginScreen extends StatefulWidget {
   var statusConnect;
@@ -14,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Body(widget.statusConnect),
+      body: Body(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../Screens/Welcome/components/body.dart';
+import 'midPage/body.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
