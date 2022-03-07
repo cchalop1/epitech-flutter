@@ -53,6 +53,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
       },
       child: Row(children: [
         Container(
+          margin: EdgeInsets.only(right: 20, left: 10),
           width: MediaQuery.of(context).size.height * 0.2,
           height: MediaQuery.of(context).size.height * 0.2,
           decoration: BoxDecoration(
@@ -72,9 +73,11 @@ class _ProfilePictureState extends State<ProfilePicture> {
                   takePicture(ImageSource.gallery);
                 },
                 child: Text("Galery")),
-            ElevatedButton(onPressed: () {
-              deletePicture();
-            }, child: Text("Delete")),
+            ElevatedButton(
+                onPressed: () {
+                  deletePicture();
+                },
+                child: Text("Delete")),
           ],
         ),
       ]),

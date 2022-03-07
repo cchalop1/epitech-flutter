@@ -4,6 +4,7 @@ import 'package:myapp/widgets/graph.dart';
 import '../components/indicator.dart';
 import 'Welcome/midPage/background.dart';
 import 'package:myapp/widgets/listTransac.dart';
+import 'package:myapp/themes/Style.dart';
 
 class Wallet extends StatefulWidget {
   const Wallet({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class WalletState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: BGRedColor,
         title: Text("More wallet"),
         leading: BackButton(
             onPressed: () => {

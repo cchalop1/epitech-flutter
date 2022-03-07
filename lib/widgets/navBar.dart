@@ -33,12 +33,6 @@ class _NavBarState extends State<NavBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            Icons.savings,
-          ),
-          label: "Wallet",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
             Icons.account_balance,
           ),
           label: "Home",

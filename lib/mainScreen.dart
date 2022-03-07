@@ -33,7 +33,6 @@ class MainScreenState extends State<MainScreen> {
         const Center(
           child: Contacts(),
         ),
-        const Wallet(),
         const HomePage(),
         SendMony(),
         Profile(firstName: firstName, mail: mail),
@@ -51,17 +50,17 @@ class MainScreenState extends State<MainScreen> {
   void removeData() async {
     final prefs = await SharedPreferences.getInstance();
 
-    await prefs.remove('counter');
+    await prefs.remove('isConnect');
   }
 
-  int place = 2;
+  int place = 1;
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BGWhiteColor,
       appBar: AppBar(
         // backgroundColor: const Color.fromARGB(255, 185, 72, 64),
         backgroundColor: BGRedColor,
-        title: const Text('Welcome to Flutter'),
+        title: const Text('Wallet app'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
