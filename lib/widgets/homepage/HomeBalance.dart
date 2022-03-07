@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/BigText.dart';
 import 'package:myapp/themes/Style.dart';
+import 'package:myapp/constants/constants.dart';
 
 class HomeBalance extends StatelessWidget {
   const HomeBalance({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class HomeBalance extends StatelessWidget {
               ),
               Container(
                   padding: const EdgeInsets.only(top: 2),
-                  child: BigText(text: "\$ 54, 084.31"),
+                  child: BigText(text: "\$ " + SoldMoney.toString()),
                   ),
             ]),
           ]),

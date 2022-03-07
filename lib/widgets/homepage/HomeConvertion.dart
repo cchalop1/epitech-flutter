@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:myapp/components/BigText.dart';
+import 'package:myapp/constants/constants.dart';
 import 'package:myapp/constants/devisesList.dart';
 import 'package:myapp/models/Devise.dart';
 import 'package:myapp/themes/Style.dart';
@@ -13,8 +14,8 @@ class HomeConvertion extends StatefulWidget {
 }
 
 class HomeConvertionState extends State {
-  double myMoney = 54000.5;
-  double newMoney = 54000.5;
+  double myMoney = SoldMoney;
+  double newMoney = SoldMoney;
 
   @override
   Widget build(BuildContext context) {

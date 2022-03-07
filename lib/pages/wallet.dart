@@ -17,6 +17,7 @@ class WalletState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: BGWhiteColor,
       appBar: AppBar(
         backgroundColor: BGRedColor,
         title: Text("More wallet"),

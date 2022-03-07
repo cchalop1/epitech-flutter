@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/BigText.dart';
 import 'package:myapp/themes/Style.dart';
+import 'package:myapp/constants/constants.dart';
 
 class BankCard extends StatelessWidget {
   const BankCard({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class BankCard extends StatelessWidget {
               Container(
                   padding: const EdgeInsets.only(top: 2),
                   child: Text(
-                    "\$ 50, 000.00",
+                    "\$ " + SoldMoney.toString(),
                     style: GoogleFonts.roboto(
                       fontSize: GFNormalFontSize,
                       fontWeight: GFBigFontWeight,

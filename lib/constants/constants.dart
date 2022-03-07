@@ -11,3 +11,5 @@ List<Contact> listContacts = [
   Contact("Bryan", "R. Fisk", "images/fake7.jpg", "5440 1256 3870 4736"),
   Contact("James", "E. Ward", "images/fake8.jpg", "5440 1256 3870 4736"),
 ];
+
+double SoldMoney = 54084.31;
