@@ -6,6 +6,7 @@ import 'package:myapp/pages/Contacts.dart';
 import 'package:myapp/pages/SendMony.dart';
 import 'package:myapp/pages/wallet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:myapp/pages/HomePage.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({required this.mail, required this.firstName, Key? key})
@@ -32,9 +33,7 @@ class MainScreenState extends State<MainScreen> {
           child: Contacts(),
         ),
         const Wallet(),
-        const Center(
-          child: Text("HOME"),
-        ),
+        const HomePage(),
         SendMony(),
         Profile(firstName: firstName, mail: mail),
       ];
