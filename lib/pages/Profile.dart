@@ -24,7 +24,7 @@ class _ProfileState extends State<Profile> {
       children: [
         TitleContainer(text: "Profile"),
         Center(child: ProfilePicture()),
-        Center(child: ProfileName(firstName: widget.firstName, mail: widget.mail)),
+        Center(child: ProfileName()),
       ],
     ));
   }

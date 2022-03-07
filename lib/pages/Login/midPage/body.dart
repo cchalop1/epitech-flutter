@@ -5,6 +5,7 @@ import 'package:myapp/components/already_have_an_account_acheck.dart';
 import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/components/rounded_input_field.dart';
 import 'package:myapp/components/rounded_password_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../mainScreen.dart';
 
@@ -19,6 +20,14 @@ class _BodyState extends State<Body> {
   _BodyState() {
     // newStatus = widget.newStatus;
   }
+  _save() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString("name", firstName);
+    prefs.setString("mail", email);
+
+    prefs.setInt("isConnect", 1);
+  }
+
   @override
   String email = "";
   String firstName = "";
@@ -64,6 +73,7 @@ class _BodyState extends State<Body> {
             RoundedButton(
               text: "LOG IN",
               press: () {
+                _save();
                 Navigator.push(
                   context,
                   MaterialPageRoute(

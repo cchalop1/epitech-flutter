@@ -4,6 +4,7 @@ import 'package:myapp/components/rounded_input_field.dart';
 
 import '../../../mainScreen.dart';
 import '../../Login/midPage/background.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -13,6 +14,14 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   String email = "";
   String firstName = "";
+  _save() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString("name", firstName);
+    prefs.setString("mail", email);
+
+    prefs.setInt("isConnect", 1);
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,6 +61,7 @@ class _BodyState extends State<Body> {
             RoundedButton(
                 text: "SIGNUP",
                 press: () {
+                  _save();
                   Navigator.push(
                     context,
                     MaterialPageRoute(

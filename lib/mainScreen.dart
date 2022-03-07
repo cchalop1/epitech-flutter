@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/Profile.dart';
+import 'package:myapp/pages/Welcome/welcome_screen.dart';
 import 'package:myapp/widgets/navBar.dart';
 import 'package:myapp/pages/Contacts.dart';
 import 'package:myapp/pages/SendMony.dart';
 import 'package:myapp/pages/wallet.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({required this.mail, required this.firstName, Key? key})
@@ -46,12 +48,32 @@ class MainScreenState extends State<MainScreen> {
     });
   }
 
+  void removeData() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    await prefs.remove('counter');
+  }
+
   int place = 2;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 185, 72, 64),
         title: const Text('Welcome to Flutter'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            removeData();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return WelcomeScreen();
+                },
+              ),
+            );
+          },
+        ),
       ),
       bottomNavigationBar: NavBar(place: place, updatePage: updatePage),
       body: widgetOptions.elementAt(place),
