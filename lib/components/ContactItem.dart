@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/models/Contact.dart';
+import 'package:myapp/themes/Style.dart';
 
 class ContactItem extends StatefulWidget {
   ContactItem(
@@ -28,7 +29,8 @@ class _ContactItemState extends State<ContactItem> {
           width: MediaQuery.of(context).size.height * 0.1,
           decoration: widget.contact.getId() == widget.currentContact?.getId()
               ? BoxDecoration(
-                  color: Color.fromARGB(255, 185, 72, 64),
+                  // color: Color.fromARGB(255, 185, 72, 64),
+                  color: BGRedColor,
                   borderRadius: BorderRadius.circular(100),
                 )
               : null,

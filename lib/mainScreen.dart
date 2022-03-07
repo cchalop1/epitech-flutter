@@ -7,6 +7,7 @@ import 'package:myapp/pages/SendMony.dart';
 import 'package:myapp/pages/wallet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:myapp/pages/HomePage.dart';
+import 'package:myapp/themes/Style.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({required this.mail, required this.firstName, Key? key})
@@ -57,7 +58,8 @@ class MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 185, 72, 64),
+        // backgroundColor: const Color.fromARGB(255, 185, 72, 64),
+        backgroundColor: BGRedColor,
         title: const Text('Welcome to Flutter'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),

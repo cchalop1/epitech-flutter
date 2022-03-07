@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/widgets/BankCard.dart';
+import 'package:myapp/themes/Style.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({required this.place, required this.updatePage, Key? key})
@@ -20,7 +21,8 @@ class _NavBarState extends State<NavBar> {
     return BottomNavigationBar(
       selectedIconTheme:
           const IconThemeData(color: Color.fromARGB(255, 185, 72, 64)),
-      selectedItemColor: const Color.fromARGB(255, 185, 72, 64),
+      // selectedItemColor: const Color.fromARGB(255, 185, 72, 64),
+      selectedItemColor: BGRedColor,
       unselectedItemColor: Colors.black,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(

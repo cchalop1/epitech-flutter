@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 Color BGWhiteColor = Color(0xffe4e4e4);
 Color BGGreyColor = Color(0xffa5a5a6);
 Color BGDarkGreenColor = Color(0xff2c5a56);
-Color BGRedColor = Color(0xff931f13);
+Color BGRedColor = Color(0xffb94840);
 Color BGOrangeColor = Color(0xffc68448);
 Color BGLiteGreenColor = Color(0xff698b8b);
 Color BGBrownColor = Color(0xff47201e);

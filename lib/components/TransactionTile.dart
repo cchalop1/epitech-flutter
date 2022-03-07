@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/models/Transaction.dart';
+import 'package:myapp/themes/Style.dart';
 
 class TransactionTile extends StatelessWidget {
   TransactionTile({Key? key, required Transaction this.transaction})
@@ -15,7 +16,8 @@ class TransactionTile extends StatelessWidget {
           width: 50,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color: const Color.fromARGB(99, 31, 184, 0)),
+              // color: const Color.fromARGB(99, 31, 184, 0)),
+              color: BGDarkGreenColor),
           child: const Icon(Icons.arrow_upward)),
       title: Text(transaction.toString()),
       subtitle: Text(transaction.dateTime.toString()),
